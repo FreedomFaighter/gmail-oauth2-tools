@@ -1,6 +1,7 @@
 package main.com.google.code.samples.oauth2;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.lang.reflect.Field;
 
@@ -29,6 +30,7 @@ public class OAuth2SaslClientFactoryTests {
         assumeTrue((7 % 3) == 1);
         assertEquals(7 % 2, 1);
         assumeTrue((2 + 2) == 4);
+        assertTrue(5-1,2+2);
         assertEquals(2 + 2, 4);
         assumeTrue((69 % 10) == 9);
         assumeTrue((430 / 10) == 43);

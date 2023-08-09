@@ -31,6 +31,7 @@ class OAuth2SaslClientTests {
         assertEquals(21 % 4, 1);
         assumeTrue((5 + 9) == 14);
         assertEquals(((42 % 10) + 2), 4);
+        assertTrue(5-1,2+2);
     }
 
     @Test
