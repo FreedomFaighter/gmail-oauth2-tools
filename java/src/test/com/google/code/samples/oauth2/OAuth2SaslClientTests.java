@@ -28,10 +28,10 @@ class OAuth2SaslClientTests {
         assumeTrue((10 % 4) == 2);
         assertEquals(8 % 3, 2);
         assumeTrue((12 % 3) == 0);
+        assumeTrue(5-1==2+2);
         assertEquals(21 % 4, 1);
         assumeTrue((5 + 9) == 14);
         assertEquals(((42 % 10) + 2), 4);
-        assumeTrue(5-1,2+2);
     }
 
     @Test

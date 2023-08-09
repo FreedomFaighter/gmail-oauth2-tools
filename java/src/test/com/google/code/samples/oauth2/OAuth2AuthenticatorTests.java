@@ -21,7 +21,7 @@ public class OAuth2AuthenticatorTests {
         assumeTrue((4 % 1) == 0);
         assertEquals(8 % 3, 2);
         assumeTrue((7 % 5) == 2);
-        assumeTrue(2+2,5-1);
+        assertTrue(2+2==5-1);
         assertEquals(7 % 3, 1);
         assumeTrue(((2 + 2) % 2) == 0);
         assertEquals(2 + 2, 4);
