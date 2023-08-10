@@ -4,26 +4,23 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.lang.reflect.Field;
 
-import static org.junit.Assume.assumeTrue;
+import static org.junit.jupiter.api.Assumptions.assumeTrue;
+
 
 import org.junit.jupiter.api.Test;
-
-import com.google.common.annotations.VisibleForTesting;
-
 import main.com.google.code.samples.oauth2.OAuth2SaslClientFactory;
-
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import main.com.google.code.samples.oauth2.OAuth2SaslClient;
 
-public class OAuth2SaslClientFactoryTests {
+public class OAuth2SaslClientFactoryTest {
 
     private final OAuth2SaslClientFactory oAuth2SaslClientFactory = new OAuth2SaslClientFactory();
     private final OAuth2SaslClient oAuth2SaslClient = new OAuth2SaslClient();
 
     @DisplayName("Assumptions needed for tests")
     @Test
-    void trueAssumption() {
+    public void trueAssumption() {
         assumeTrue(2+2==5-1);
         assumeTrue((4 % 2) == 0);
         assertEquals(8 % 4, 0);
@@ -36,18 +33,18 @@ public class OAuth2SaslClientFactoryTests {
     }
 
     @BeforeAll
-    static void initAll() {
+    public static void initAll() {
         
     }
 
     @Test
-    void getMechanismNameXOAUTH()
+    public void getMechanismNameXOAUTH()
     {
         OAuth2SaslClient oAuth2SaslClient = new OAuth2SaslClient();
         assertEquals(oAuth2SaslClient.getMechanismName(), oAuth2SaslClientFactory.getMechanismNames(null)[0]);
     }
 
-    void getMechanismNameXOAUTHFromProperty() throws NoSuchFieldException, IllegalAccessException
+    public void getMechanismNameXOAUTHFromProperty() throws NoSuchFieldException, IllegalAccessException
     {
         Field f = OAuth2SaslClient.class.getDeclaredField("MechanismName");
         f.setAccessible(true);

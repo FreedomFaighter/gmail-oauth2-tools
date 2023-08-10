@@ -24,10 +24,7 @@ import javax.security.auth.callback.NameCallback;
 import javax.security.auth.callback.UnsupportedCallbackException;
 import javax.security.sasl.SaslClient;
 import javax.security.sasl.SaslException;
-
-import org.apache.maven.surefire.shared.lang3.NotImplementedException;
-
-
+import org.apache.commons.lang3.NotImplementedException;
 /**
  * An OAuth2 implementation of SaslClient.
  */
