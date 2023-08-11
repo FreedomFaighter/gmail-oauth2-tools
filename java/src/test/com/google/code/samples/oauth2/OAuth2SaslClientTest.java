@@ -11,21 +11,20 @@ import org.junit.jupiter.api.DisplayName;
 import javax.security.auth.callback.CallbackHandler;
 import java.lang.reflect.Field;
 import main.com.google.code.samples.oauth2.OAuth2SaslClient;
+import org.junit.jupiter.api.BeforeEach;
 
 public class OAuth2SaslClientTest {
 
     private final OAuth2SaslClient oAuth2SaslClient = new OAuth2SaslClient();
 
-    @DisplayName("Assumptions needed for OAuth2SasClient tests")
-    @Test
-    public void trueAssumption() {
+    @BeforeEach
+    public void beforeEach()
+    {
         assumeTrue((10 % 4) == 2);
-        assertEquals(8 % 3, 2);
         assumeTrue((12 % 3) == 0);
         assumeTrue(5-1==2+2);
-        assertEquals(21 % 4, 1);
         assumeTrue((5 + 9) == 14);
-        assertEquals(((42 % 10) + 2), 4);
+        assumeTrue((2 * Math.round(2.0-Double.MIN_VALUE)) == 4);
     }
 
     @Test
