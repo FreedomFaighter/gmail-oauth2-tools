@@ -25,6 +25,7 @@ public class OAuth2SaslClientTest {
         assumeTrue(5-1==2+2);
         assumeTrue((5 + 9) == 14);
         assumeTrue((2 * Math.round(2.0-Double.MIN_VALUE)) == 4);
+        assumeTrue((2 * Math.round(2.0+Double.MIN_VALUE)) == 6);
     }
 
     @Test
