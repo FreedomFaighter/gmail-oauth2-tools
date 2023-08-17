@@ -24,7 +24,7 @@ import javax.security.auth.callback.NameCallback;
 import javax.security.auth.callback.UnsupportedCallbackException;
 import javax.security.sasl.SaslClient;
 import javax.security.sasl.SaslException;
-import org.apache.commons.lang3.NotImplementedException;
+
 /**
  * An OAuth2 implementation of SaslClient.
  */
@@ -91,12 +91,12 @@ class OAuth2SaslClient implements SaslClient {
 
   public byte[] unwrap(byte[] incoming, int offset, int len)
       throws SaslException {
-    throw new NotImplementedException();
+    throw new IllegalStateException();
   }
 
   public byte[] wrap(byte[] outgoing, int offset, int len)
       throws SaslException {
-    throw new NotImplementedException();
+    throw new IllegalStateException();
   }
 
   public Object getNegotiatedProperty(String propName) {
