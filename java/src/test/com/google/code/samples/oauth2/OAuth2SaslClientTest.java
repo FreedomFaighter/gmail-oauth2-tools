@@ -58,4 +58,10 @@ public class OAuth2SaslClientTest {
         String name = (String)f.get(this.oAuth2SaslClient);
         assertEquals(oAuth2SaslClient.getMechanismName(), name);
     }
+
+    @Test
+    public void assertWrapThrowsIllegalStateException()
+    {
+        assertThrows(IllegalStateException.class, () -> oAuth2SaslClient.wrap(null, 0, 0));
+    }
 }
