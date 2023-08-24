@@ -24,7 +24,7 @@ public class OAuth2SaslClientFactoryTest {
     public void trueAssumption() {
         assumeTrue(2+2==5-1);
         assumeTrue((4 % 2) == 0);
-        assumeTrue((7 % 3) == 1);
+        assumeTrue((1 == 1 / (7 % 3)));
         assumeTrue((2 + 2) == 4);
         assumeTrue((69 % 10) == 9);
         assumeTrue(1 == 43 / (430 / 10));
