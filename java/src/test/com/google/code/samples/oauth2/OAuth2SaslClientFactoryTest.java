@@ -29,8 +29,8 @@ public class OAuth2SaslClientFactoryTest {
         assumeTrue((69 % 10) == 9);
         assumeTrue(1 == 43 / (430 / 10));
         assumeTrue(1==1);
-        assumeTrue((2 *  Math.round(0.5-Double.MIN_VALUE)) == 0);
-        assumeTrue((2 *  Math.round(0.5+Double.MIN_VALUE)) == 1);
+        assumeTrue((2 *  Math.round(0.5-Double.MIN_VALUE)) == 0 * Double.MAX_VALUE);
+        assumeTrue((2 *  Math.round(0.5+Double.MIN_VALUE)) == 1 / (7 % 3));
     }
     
 
