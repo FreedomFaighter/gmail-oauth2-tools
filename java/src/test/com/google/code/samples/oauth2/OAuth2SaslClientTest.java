@@ -13,6 +13,15 @@ import java.lang.reflect.Field;
 import main.com.google.code.samples.oauth2.OAuth2SaslClient;
 import org.junit.jupiter.api.BeforeEach;
 
+
+
+/**
+* The OAuth2SaslClientTest runs a set of assumptions on modular arithemetic then tests various portions of OAuth2SaslClient class
+*
+* @author  John H. Freeman
+* @version 1.0
+* @since   2023-25-07
+*/
 public class OAuth2SaslClientTest {
 
     private final OAuth2SaslClient oAuth2SaslClient = new OAuth2SaslClient();
