@@ -15,7 +15,6 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>11</java.version>
     </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -30,8 +29,8 @@
         </dependency>
     </dependencies>
     <build>
-        <sourceDirectory>./java/src/main</sourceDirectory>
-        <testSourceDirectory>./java/src/test</testSourceDirectory>
+        <sourceDirectory>./src/main</sourceDirectory>
+        <testSourceDirectory>./src/test</testSourceDirectory>
         <directory>${project.basedir}/target</directory>
         <outputDirectory>${project.build.directory}/classes</outputDirectory>
         <finalName>${project.artifactId}-${project.version}</finalName>
@@ -43,6 +42,7 @@
                     <source>11</source>
                     <target>11</target>
                 </configuration>
+                <version>3.11.0</version>
             </plugin>
             <plugin>
                 <artifactId>maven-jar-plugin</artifactId>
