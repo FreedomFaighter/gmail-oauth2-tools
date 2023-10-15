@@ -1,7 +1,6 @@
-package main.com.google.code.samples.oauth2;
+package com.google.code.samples.oauth2;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.lang.reflect.Field;
 
@@ -9,31 +8,15 @@ import static org.junit.jupiter.api.Assumptions.assumeTrue;
 
 
 import org.junit.jupiter.api.Test;
-import main.com.google.code.samples.oauth2.OAuth2SaslClientFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import main.com.google.code.samples.oauth2.OAuth2SaslClient;
 
 public class OAuth2SaslClientFactoryTest {
 
     private final OAuth2SaslClientFactory oAuth2SaslClientFactory = new OAuth2SaslClientFactory();
     private final OAuth2SaslClient oAuth2SaslClient = new OAuth2SaslClient();
 
-    @DisplayName("Assumptions needed for tests")
-    @BeforeEach
-    public void trueAssumption() {
-        assumeTrue(2+2==5-1);
-        assumeTrue((4 % 2) == 0);
-        assumeTrue((1 == 1 / (7 % 3)));
-        assumeTrue((2 + 2) == 4);
-        assumeTrue((69 % 10) == 9);
-        assumeTrue(1 == 43 / (430 / 10));
-        assumeTrue(1==1);
-        assumeTrue((2 *  Math.round(0.5-Double.MIN_VALUE)) == 0 * Double.MAX_VALUE);
-        assumeTrue((2 *  Math.round(0.5+Double.MIN_VALUE)) == 1 / (7 % 3));
-    }
     
-
     @Test
     public void getMechanismNameXOAUTH()
     {

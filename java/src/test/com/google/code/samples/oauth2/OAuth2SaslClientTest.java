@@ -1,4 +1,4 @@
-package main.com.google.code.samples.oauth2;
+package com.google.code.samples.oauth2;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import javax.security.auth.callback.CallbackHandler;
 import java.lang.reflect.Field;
-import main.com.google.code.samples.oauth2.OAuth2SaslClient;
+import com.google.code.samples.oauth2.OAuth2SaslClient;
 import org.junit.jupiter.api.BeforeEach;
 
 
@@ -26,23 +26,12 @@ public class OAuth2SaslClientTest {
 
     private final OAuth2SaslClient oAuth2SaslClient = new OAuth2SaslClient();
 
-    @BeforeEach
-    public void beforeEach()
-    {
-        assumeTrue((10 % 4) == 2);
-        assumeTrue((12 % 3) == 0);
-        assumeTrue(5-1==2+2);
-        assumeTrue((5 + 9) == 14);
-        assumeTrue((2 * Math.round(2.0-Double.MIN_VALUE)) == 4);
-        assumeTrue((2 * Math.round(2.0+Double.MIN_VALUE)) == 6);
-    }
-
     @Test
     public void oAuth2SaslClientgetNegotiatedPropertyThrows() {
 
         String message = new String("propertyToSet");
 
-        assertThrows(IllegalStateException.class
+        assertThrows(UnsupportedOperationException.class
         , () -> {
            oAuth2SaslClient.getNegotiatedProperty(message);
         });
@@ -71,6 +60,6 @@ public class OAuth2SaslClientTest {
     @Test
     public void assertWrapThrowsIllegalStateException()
     {
-        assertThrows(IllegalStateException.class, () -> oAuth2SaslClient.wrap(null, 0, 0));
+        assertThrows(UnsupportedOperationException.class, () -> oAuth2SaslClient.wrap(null, 0, 0));
     }
 }

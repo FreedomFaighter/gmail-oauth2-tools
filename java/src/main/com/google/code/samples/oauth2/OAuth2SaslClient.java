@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package main.com.google.code.samples.oauth2;
+package com.google.code.samples.oauth2;
 
 import java.io.IOException;
 import java.util.logging.Logger;
@@ -91,17 +91,17 @@ class OAuth2SaslClient implements SaslClient {
 
   public byte[] unwrap(byte[] incoming, int offset, int len)
       throws SaslException {
-    throw new IllegalStateException();
+    throw new UnsupportedOperationException();
   }
 
   public byte[] wrap(byte[] outgoing, int offset, int len)
       throws SaslException {
-    throw new IllegalStateException();
+    throw new UnsupportedOperationException();
   }
 
   public Object getNegotiatedProperty(String propName) {
     if (!isComplete()) {
-      throw new IllegalStateException();
+      throw new UnsupportedOperationException();
     }
     switch(propName)
     {
