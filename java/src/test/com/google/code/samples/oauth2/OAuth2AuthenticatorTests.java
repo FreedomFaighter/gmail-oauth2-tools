@@ -2,6 +2,7 @@ package main.com.google.code.samples.oauth2;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.Assume.assumeTrue;
+import static org.junit.Assume.assumeFalse;
 import org.junit.jupiter.api.BeforeAll;
 
 import org.junit.jupiter.api.Test;
@@ -22,6 +23,7 @@ public class OAuth2AuthenticatorTests {
         assumeTrue((7 % 5) == 2);
         assertEquals(7 % 3, 1);
         assumeTrue(((2 + 2) % 2) == 0);
+        assumeFalse(((2 + 2) % 2) == 1);
         assertEquals(2 + 2, 4);
     }
 
